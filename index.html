@@ -93,5 +93,5 @@ function retry(){startPhase(current)}
 // Migra automaticamente o progresso antigo deste aparelho para um cadastro na primeira entrada.
 const legacy=JSON.parse(localStorage.getItem('jdf01')||'null');
 updateTop();if(playerKey&&db[playerKey]){goMap()}else{show('welcome');if(legacy&&legacy.name){nameInput.value=legacy.name;loginHint.textContent='Encontramos um progresso da versão anterior. Crie um PIN para proteger e continuar sua jornada.';mode='new';loginBtn.textContent='CRIAR PIN E CONTINUAR';}}
-if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+if('serviceWorker'in navigator)navigator.serviceWorker.register('/service-worker.js').catch(()=>{});
 </script></body></html>
